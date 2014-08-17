@@ -1,12 +1,13 @@
-= simple_form_for(@item) do |f|
-  = f.error_notification
-
-  .form-inputs
-    = f.input :name
-    = f.input :due_date
-    = f.input :complete?
-    = f.input :past_due?
-    = f.association :list
-
-  .form-actions
-    = f.button :submit
+= simple_form_for @item, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :name
+  = error_span(@item[:name])
+  = f.input :due_date
+  = error_span(@item[:due_date])
+  = f.input :complete?
+  = error_span(@item[:complete?])
+  = f.input :past_due?
+  = error_span(@item[:past_due?])
+  = f.input :list_id
+  = error_span(@item[:list_id])
+  = f.button :submit, :class => 'btn-primary'
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), items_path, :class => 'btn btn-default'
