@@ -1,0 +1,12 @@
+= simple_form_for(@item) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :due_date
+    = f.input :complete?
+    = f.input :past_due?
+    = f.association :list
+
+  .form-actions
+    = f.button :submit

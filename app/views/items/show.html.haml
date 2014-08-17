@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @item.name
+%p
+  %b Due date:
+  = @item.due_date
+%p
+  %b Complete?:
+  = @item.complete?
+%p
+  %b Past due?:
+  = @item.past_due?
+%p
+  %b List:
+  = @item.list
+
+= link_to 'Edit', edit_item_path(@item)
+\|
+= link_to 'Back', items_path
