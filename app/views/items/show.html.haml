@@ -13,11 +13,7 @@
 %p
   %strong= model_class.human_attribute_name(:complete?) + ':'
   %br
-  = @item.complete?
-%p
-  %strong= model_class.human_attribute_name(:past_due?) + ':'
-  %br
-  = @item.past_due?
+  = @item.complete
 %p
   %strong= model_class.human_attribute_name(:list_id) + ':'
   %br

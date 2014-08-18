@@ -6,8 +6,6 @@
   = f.label :complete
   = f.check_box :complete
   = error_span(@item[:complete])
-  = f.input :past_due
-  = error_span(@item[:past_due])
   = f.input :list_id
   = error_span(@item[:list_id])
   = f.button :submit, :class => 'btn-primary'
