@@ -10,7 +10,6 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
-    @item = Item.find(params[:id])
   end
 
   # GET /items/new
@@ -20,7 +19,6 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
-    @item = Item.find(params[:id])
   end
 
   # POST /items
@@ -69,6 +67,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:name, :due_date, :complete?, :past_due?, :list_id)
+      params.require(:item).permit(:name, :due_date, :complete, :past_due, :list_id)
     end
 end
