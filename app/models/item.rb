@@ -14,4 +14,10 @@
 
 class Item < ActiveRecord::Base
   belongs_to :list
+
+  def past_due?
+    past_due < Time.now
+  end
+
 end
+
