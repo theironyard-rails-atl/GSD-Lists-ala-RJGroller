@@ -3,6 +3,7 @@
   = error_span(@item[:name])
   = f.input :due_date
   = error_span(@item[:due_date])
+  = f.label :complete
   = f.check_box :complete
   = error_span(@item[:complete])
   = f.input :past_due
