@@ -6,7 +6,6 @@
 #  name       :string(255)
 #  due_date   :datetime
 #  complete   :boolean
-#  past_due   :boolean
 #  list_id    :integer
 #  created_at :datetime
 #  updated_at :datetime
